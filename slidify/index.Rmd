@@ -1,0 +1,41 @@
+---
+title: "MTR Cars Data Product Slidify Project"
+author: "Russell JVM Gutierrez"
+date: "22 November, 2015"
+output: slidy_presentation
+---
+
+## Project Description
+
+This project was created as the project coursework for Data Products course.
+
+It uses the mtcars dataset and plots the linear regression of a predictor variable
+and the resulting miles per gallon ("mpg").
+
+The working shiny app can be accessed at <https://rgucci.shinyapps.io/test1>
+
+---
+
+## The "mtr" cars data set used
+
+```{r}
+names(mtcars)
+```
+
+---
+
+## Instructions
+
+- First, select the predictor variable (hp, cyl, wt, etc.)
+- Next, the linear regression for "mpg" will automatically be plotted in relation to the predictor variable selected in the first step
+
+---
+
+## Sample Output (mpg ~ hp)
+
+```{r, echo=FALSE}
+    with(mtcars, {
+        plot(mpg ~ hp,xlab="cyl",ylab="mpg")
+        abline(lm(mpg~hp,data=mtcars),col=2)
+    })
+```
