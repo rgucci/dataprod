@@ -35,7 +35,7 @@ names(mtcars)
 
 ```{r, echo=FALSE}
     with(mtcars, {
-        plot(mpg ~ hp,xlab="cyl",ylab="mpg")
+        plot(mpg ~ hp,xlab="hp",ylab="mpg")
         abline(lm(mpg~hp,data=mtcars),col=2)
     })
 ```
